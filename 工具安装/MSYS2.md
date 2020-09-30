@@ -8,20 +8,22 @@ MSYS2是一个Windows上的软件分发和构建平台。集合了许多用于�
 
 安装完成后，打开MSYS2的终端，以下命令均需要在MSYS2的终端中使用。
 
-首先，更新package库：
+首先，更换软件源，修改`/msys64/etc/pacman.d`中的三个`mirrorlist`文件，将国内源放到最前面。
+
+重新打开msys终端，更新package库：
 `pacman -Syu`
 
 如果主体需要更新，会要求关闭终端再重新打开，然后才能更新package：
 `pacman -Su`
 
-> 静态库的路径为:
-> `msys2\usr\lib`
-> `msys2\mingw64\lib`
-> 头文件的路径为:
-> `msys2\usr\include`
+> 静态库的路径为:  
+> `msys2\usr\lib`  
+> `msys2\mingw64\lib`  
+> 头文件的路径为:  
+> `msys2\usr\include`  
 > `msys2\mingw64\include`
 
-**注意：**在`MSYS2`中安装的工具链，最好在`MSYS2`的`MINGW`终端中使用，否则可能发生意料之外的错误。
+**注意：**在`MSYS2`中安装的工具链，应当在`MSYS2`的`MINGW`终端中使用，否则会发生错误。
 
 ## 安装package
 
